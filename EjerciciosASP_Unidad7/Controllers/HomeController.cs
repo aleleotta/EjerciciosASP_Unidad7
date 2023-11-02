@@ -6,39 +6,23 @@ namespace EjerciciosASP_Unidad7.Controllers
     {
 
         public IActionResult Index() {
-            return View();
-        }
-
-        public IActionResult Privacy() {
-            return View();
-        }
-
-        public static DateTime getTime() {
+            string welcome = "";
             DateTime time = DateTime.Now;
-            return time;
-        }
-
-        public static int getHour(DateTime time) {
             int hour = time.Hour;
-            return hour;
-        }
-
-        public static string welcomeMessage() {
-            string welcome = "Welcome!";
-            DateTime time = getTime();
-            int hour = getHour(time);
             if (hour < 12)
             {
                 welcome = "Good Morning!";
             }
-            else if (hour > 12 && hour < 18)
+            else if (hour >= 12 && hour < 18)
             {
                 welcome = "Good Afternoon!";
             }
-            else {
+            else
+            {
                 welcome = "Good Evening!";
             }
-            return welcome;
+            ViewData["Welcome"] = welcome;
+            return View();
         }
 
     }
