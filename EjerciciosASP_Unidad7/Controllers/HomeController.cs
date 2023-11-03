@@ -30,11 +30,6 @@ namespace EjerciciosASP_Unidad7.Controllers
                 new Person {id = 2, firstName = "John", lastName = "Shepard", age = 35},
                 new Person {id = 3, firstName = "Jane", lastName = "Shepard", age = 32}
             };
-            //Person p1 = new Person();
-            //p1.id = 1;
-            //p1.firstName = "Alessandro";
-            //p1.lastName = "Leotta";
-            //p1.age = 21;
             return View(people);
         }
 
