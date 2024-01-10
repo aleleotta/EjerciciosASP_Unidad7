@@ -6,11 +6,14 @@
     <h1 class="display-4">Welcome</h1>
     <h3>@ViewData["Welcome"]</h3>
     <h3>@ViewBag.time</h3>
-    <h3>List of people:<br/>@foreach (Person person in Model)
-        {
-            <li>
-                <h4>@person.id, @person.firstName, @person.lastName, @person.age</h4>
-            </li>
-        }
-    </h3>
 </div>
+<h3>List of people:</h3>
+<br />
+<ul>
+    @foreach (Person person in Model)
+    {
+        <li>
+            <h4>@person.id, @person.firstName, @person.lastName, @person.age</h4>
+        </li>
+    }
+</ul>
