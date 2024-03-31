@@ -22,7 +22,6 @@ namespace EjerciciosASP_Unidad7.Controllers
                 welcome = "Good Evening!";
             }
             ViewData["Welcome"] = welcome;
-            ViewBag.time = time;
             List<Person> people = new List<Person>
             {
                 new Person {id = 1, firstName = "Alessandro", lastName = "Leotta", age = 21},
