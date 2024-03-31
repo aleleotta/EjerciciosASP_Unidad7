@@ -8,8 +8,7 @@ namespace EjerciciosASP_Unidad7.Controllers
 
         public IActionResult Index() {
             string welcome = "";
-            DateTime time = DateTime.Now;
-            int hour = time.Hour;
+            int hour = DateTime.Now.Hour;
             if (hour < 12)
             {
                 welcome = "Good Morning!";
